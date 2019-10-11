@@ -1,0 +1,82 @@
+body, input[type="text"]
+    font:
+        family: $body-font
+        size: 16px
+        weight: $regular-weight
+
+.wrapper
+    display: grid
+    grid-template-columns: 3fr 2fr
+    grid-template-rows: 100vh
+    max-height: 100vh
+
+.page-content
+    display: grid
+    grid-template-columns: fit-content(450px)
+    grid-template-rows: 15% min-content min-content min-content
+    grid-gap: 5%
+    padding: 10% 5px 
+    padding-left: 15%
+    background: 
+        image: url("../img/bg-pattern-desktop.svg")
+        repeat: no-repeat
+        size: cover
+    >.page-title
+        text-transform: uppercase
+        letter-spacing: 15px
+        font: 
+            size: 4rem
+            weight: $semibold-weight
+    >.text
+        line-height: 25px
+        color: $primary-color
+
+.form-email 
+    display: grid
+    grid-template-columns: 1fr min-content 80px
+    align-items: center
+    >.input
+        width: 100%
+        height: 50px
+        padding: 0 20px
+        border: 1px solid $primary-color
+        border-radius: 30px
+        color: $neutral-color
+        font:
+            size: 13px
+            weight: $semibold-weight
+        &::placeholder
+            color: $primary-color
+        
+    >.iconError
+        visibility: hidden
+        margin-left: -50px
+    >.submit
+        width: 80px
+        height: 100%
+        margin-left: -20px
+        border-radius: 30px
+        box-shadow: -5px 10px 20px 0px rgba(202,85,85, 0.50)
+        background:
+            image: url("../img/icon-arrow.svg"), linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%))
+            position: center
+            repeat: no-repeat
+        &:hover
+            cursor: pointer
+            background-image: url("../img/icon-arrow.svg"), linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 80%, 86%))
+    >.msgError
+        margin: 8px 30px
+        color: $secondary-color
+        
+.page-title
+    &>span
+        display: block
+        color: $primary-color
+        font-weight: $light-weight
+
+ 
+.img
+    display: block
+    width: 100%
+    height: 100vh
+    object-fit: cover
