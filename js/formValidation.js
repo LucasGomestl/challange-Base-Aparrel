@@ -14,7 +14,7 @@ const btnSubmit = document.querySelector(".submit"),
       msgError  = document.querySelector(".msgError"),
       email = document.querySelector(".form-email input[name='email']"),
       message = {
-          empty: "Please fill this field",
+          empty: "Required field",
           invalidEmail: "Please provide a valid email"
       };
 
