@@ -12,8 +12,7 @@ function style(){
         .pipe(gulp.dest('css'))
         .pipe(browserSync.stream())
         resolve();
-    })
-   
+    });
 }
 
 function watch(){
@@ -24,6 +23,7 @@ function watch(){
     });
     gulp.watch('sass/**/*.sass', style);
     gulp.watch('./**/*.html').on('change', browserSync.reload);
+    gulp.watch('./**/*.js').on('change', browserSync.reload);
 }
 
 gulp.task('default', gulp.series(style, watch));
